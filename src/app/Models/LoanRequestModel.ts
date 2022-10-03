@@ -1,7 +1,11 @@
 export class LoanRequestModel {
   loanRequestId: number
-  firstName: string
-  lastName: string
-  phoneNumber: string
-  email: string
+  firstName = "";
+  lastName = "";
+  phoneNumber = "";
+  email = "";
+  employmentType = "";
+  companyName = "";
+  purposeForLoan = "";
+  loanAmount: number
 }

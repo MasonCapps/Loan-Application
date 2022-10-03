@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { LoanRequestModel } from '../Models/LoanRequestModel';
+// import { EmploymentDetailsModel } from 'src/app/models/EmploymentDetailsModel';
 
 @Component({
   selector: 'app-details',
@@ -6,14 +8,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./details.component.css']
 })
 export class DetailsComponent implements OnInit {
-
+  @Input() loan?: LoanRequestModel;
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  loan = {}
+  created = false;
 
-  loans = []
+  submit(loan) {
+    this.created = true;
+    console.log("form submitted", loan);
+  }
 
 }

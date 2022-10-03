@@ -1,19 +1,27 @@
 <div style="text-align:center">
   <h1>Loan Application Form</h1>
 </div>
-<div>
-  <div>
-    <h2><u>Personal Details:</u></h2>
-    <h4>First Name: <input type="text" /></h4>
-    <h4>Last Name: <input type="text" /></h4>
-    <h4>Phone Number: <input type="text" /></h4>
-    <h4>Email: <input type="text" /></h4>
-  </div>
-  <div>
-    <h2><u>Employment Details:</u></h2>
-    <h4>Employment Type: <input type="text" /></h4>
-    <h4>Company Name: <input type="text" /></h4>
-    <h4>Purpose For Loan: <input type="text" /></h4>
-    <h4>Loan Amount: <input type="text" /></h4>
-  </div>
+<div style="text-align:center">
+  <form>
+    <div>
+      <h2><u>Personal Details:</u></h2>
+      <h4 class="form-group">First Name: <input [(ngModel)]="loan.firstName" /></h4>
+      <h4 class="form-group">Last Name: <input [(ngModel)]="loan.lastName" /></h4>
+      <h4 class="form-group">Phone Number: <input [(ngModel)]="loan.phoneNumber" /></h4>
+      <h4 class="form-group">Email: <input [(ngModel)]="loan.email" /></h4>
+    </div>
+    <div>
+      <h2><u>Employment Details:</u></h2>
+      <h4 class="form-group">Employment Type: <input [(ngModel)]="loan.employmentType" /></h4>
+      <h4 class="form-group">Company Name: <input [(ngModel)]="loan.companyName" /></h4>
+      <h4 class="form-group">Purpose For Loan: <input [(ngModel)]="loan.purposeForLoan" /></h4>
+      <h4 class="form-group">Loan Amount: <input [(ngModel)]="loan.loanAmount" /></h4>
+    </div>
+  </form>
+</div>
+<div style="text-align:center">
+  <button (click)="createLoan()">Generate Loan</button>
+</div>
+<div *ngIf="!created">
+  <h1>test</h1>
 </div>
