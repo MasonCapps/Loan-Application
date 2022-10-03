@@ -7,5 +7,5 @@ export class LoanRequestModel {
   employmentType = "";
   companyName = "";
   purposeForLoan = "";
-  loanAmount: number
+  loanAmount = "";
 }

@@ -8,17 +8,41 @@ import { LoanRequestModel } from '../Models/LoanRequestModel';
   styleUrls: ['./details.component.css']
 })
 export class DetailsComponent implements OnInit {
-  @Input() loan?: LoanRequestModel;
+  // @Input() loan?: LoanRequestModel;
   constructor() { }
+  loans = []
+  loan = {
+    loanRequestId: this.loans.length + 1,
+    firstName: "",
+    lastName: "",
+    phoneNumber: "",
+    email: "",
+    employmentType: "",
+    companyName: "",
+    purposeForLoan: "",
+    loanAmount: ""
+  }
 
   ngOnInit(): void {
   }
 
-  created = false;
 
-  submit(loan) {
-    this.created = true;
+  createLoan(loan) {
     console.log("form submitted", loan);
+    this.loans.push(loan);
+    console.log(this.loans);
+    this.loan = {
+      loanRequestId: this.loans.length + 1,
+      firstName: "",
+      lastName: "",
+      phoneNumber: "",
+      email: "",
+      employmentType: "",
+      companyName: "",
+      purposeForLoan: "",
+      loanAmount: ""
+    }
   }
+
 
 }

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { LoanRequestModel } from './Models/LoanRequestModel';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Loan-Application';
+  loan: LoanRequestModel[] = [];
+  loanEdit?: LoanRequestModel = new LoanRequestModel();
 }
