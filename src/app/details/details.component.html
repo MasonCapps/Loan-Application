@@ -4,31 +4,41 @@
 <div style="text-align:center">
   <div class="py-4">
     <h2>Personal Details:</h2>
-    <div class="col-12 form-group">
-      <input type="text" class="form-control-user" placeholder="Enter First Name..." [(ngModel)]="loan.firstName" />
-      <input class="" placeholder="Enter Last Name..." [(ngModel)]="loan.lastName" />
-    </div>
+    <br />
     <div>
-      <input class="col-8" placeholder="Enter Phone Number..." [(ngModel)]="loan.phoneNumber" />
+      <input type="text" style="margin-right: 46px;" class="col-3" placeholder="Enter First Name..."
+        [(ngModel)]="loan.firstName" />
+      <input class="col-3" style="margin-left: 46px" placeholder="Enter Last Name..." [(ngModel)]="loan.lastName" />
     </div>
+    <br />
     <div>
-      <input class="col-8" placeholder="Enter Email Address..." [(ngModel)]="loan.email" />
+      <input class="col-7" placeholder="Enter Phone Number..." [(ngModel)]="loan.phoneNumber" />
+    </div>
+    <br />
+    <div>
+      <input class="col-7" placeholder="Enter Email Address..." [(ngModel)]="loan.email" />
     </div>
   </div>
   <div class="py-4">
     <h2>Employment Details:</h2>
+    <br />
     <div>
-      <input class="col-3" placeholder="Enter Loan Amount..." [(ngModel)]="loan.loanAmount" />
-      <input class="col-3" placeholder="Enter Company Name..." [(ngModel)]="loan.companyName" />
+      <input class="col-3" style="margin-right: 46px;" placeholder="Enter Loan Amount..."
+        [(ngModel)]="loan.loanAmount" />
+      <input class="col-3" style="margin-left: 46px" placeholder="Enter Company Name..."
+        [(ngModel)]="loan.companyName" />
     </div>
+    <br />
     <div>
-      <input class="col-8" placeholder="Enter Employment Type..." [(ngModel)]="loan.employmentType" />
+      <input class="col-7" placeholder="Enter Employment Type..." [(ngModel)]="loan.employmentType" />
     </div>
+    <br />
     <div>
-      <input class="col-8" placeholder="Enter Purpose For Loan..." [(ngModel)]="loan.purposeForLoan" />
+      <input class="col-7" placeholder="Enter Purpose For Loan..." [(ngModel)]="loan.purposeForLoan" />
     </div>
   </div>
 </div>
+<br />
 <div style="text-align:center">
   <button class="py-2 btn btn-light col-2" type="submit" (click)="clearFields()">Cancel</button>
   <button style="margin-left:10px" class="py-2 btn btn-primary col-2" type="submit" (click)="createLoan(loan)">Generate
