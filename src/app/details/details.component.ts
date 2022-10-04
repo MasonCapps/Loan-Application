@@ -44,5 +44,19 @@ export class DetailsComponent implements OnInit {
     }
   }
 
+  clearFields() {
+    this.loan = {
+      loanRequestId: this.loans.length + 1,
+      firstName: "",
+      lastName: "",
+      phoneNumber: "",
+      email: "",
+      employmentType: "",
+      companyName: "",
+      purposeForLoan: "",
+      loanAmount: ""
+    }
+  }
+
 
 }
